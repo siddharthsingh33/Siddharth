@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earn With Siddharth</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2424027478103663'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1" 
+src="https://www.facebook.com/tr?id=2424027478103663&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@800;900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: #8b0000;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    /* Animated background blobs */
+    .bg {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 20%, #c0152a 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 80%, #6b0000 0%, transparent 55%),
+        radial-gradient(ellipse at 50% 50%, #9b0a1a 0%, #5c0000 100%);
+      z-index: 0;
+    }
+
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      background: rgba(255, 80, 80, 0.12);
+      animation: blobFloat 6s ease-in-out infinite;
+      z-index: 0;
+    }
+    .blob1 { width: 300px; height: 300px; top: -80px; left: -80px; animation-delay: 0s; }
+    .blob2 { width: 250px; height: 250px; bottom: -60px; right: -60px; animation-delay: 3s; }
+
+    @keyframes blobFloat {
+      0%, 100% { transform: scale(1) translateY(0); }
+      50% { transform: scale(1.08) translateY(-15px); }
+    }
+
+    /* Main card */
+    .card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 420px;
+      padding: 36px 28px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: fadeUp 0.7s cubic-bezier(.23,1,.32,1) both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Title */
+    .title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(44px, 10vw, 58px);
+      color: #FFD700;
+      letter-spacing: 5px;
+      line-height: 1;
+      text-shadow:
+        0 0 30px rgba(255, 215, 0, 0.5),
+        0 4px 15px rgba(0,0,0,0.5);
+      margin-bottom: 24px;
+      animation: fadeUp 0.7s 0.1s cubic-bezier(.23,1,.32,1) both;
+    }
+
+    /* Profile photo box */
+    .photo-wrap {
+      width: 210px;
+      height: 210px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.1);
+      border: 2.5px solid rgba(255,255,255,0.3);
+      overflow: hidden;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeUp 0.7s 0.2s cubic-bezier(.23,1,.32,1) both;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    }
+
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-placeholder {
+      font-size: 72px;
+    }
+
+    /* Name */
+    .name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(18px, 5vw, 24px);
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      animation: fadeUp 0.7s 0.3s cubic-bezier(.23,1,.32,1) both;
+    }
+
+    /* Progress bar */
+    .progress-wrap {
+      width: 100%;
+      max-width: 340px;
+      height: 5px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      animation: fadeUp 0.7s 0.35s cubic-bezier(.23,1,.32,1) both;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #FFD700, #FFA500);
+      border-radius: 10px;
+      transition: width 1s linear;
+    }
+
+    /* CTA Button */
+    .btn {
+      display: block;
+      width: 100%;
+      max-width: 340px;
+      padding: 17px 24px;
+      background: linear-gradient(135deg, #1e88e5, #1565c0);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 30px rgba(30,136,229,0.45);
+      transition: transform 0.15s, box-shadow 0.15s;
+      animation: fadeUp 0.7s 0.4s cubic-bezier(.23,1,.32,1) both;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 10px 40px rgba(30,136,229,0.55);
+    }
+    .btn:active { transform: scale(0.98); }
+
+    /* Click here text */
+    .click-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      color: #FFD700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      margin-bottom: 14px;
+      animation: fadeUp 0.7s 0.45s cubic-bezier(.23,1,.32,1) both;
+    }
+
+    /* Countdown */
+    .countdown {
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
+      animation: fadeUp 0.7s 0.5s cubic-bezier(.23,1,.32,1) both;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cnt-badge {
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,215,0,0.4);
+      color: #FFD700;
+      font-weight: 700;
+      font-size: 13px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg"></div>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <div class="card">
+    <div class="title">Narak Ka Raja</div>
+
+    <div class="photo-wrap">
+      <!-- 
+        TO ADD YOUR PHOTO:
+        Replace the emoji below with:
+        <img src="YOUR_PHOTO_URL" alt="Siddharth" />
+      -->
+      <img src="photo.jpg" alt="=Siddharth" />
+    </div>
+
+
+
+    <div class="name">Earn With Siddharth</div>
+
+    <div class="progress-wrap">
+      <div class="progress-fill" id="progressBar"></div>
+    </div>
+
+    <a class="btn" href="https://t.me/+4VEqs7ZTkPA1ZDA1" id="joinBtn">
+      Join Free Telegram
+    </a>
+
+    <div class="click-text">👆 Click Here To Join 👆</div>
+
+    <div class="countdown">
+      Redirecting in <span class="cnt-badge" id="counter">3</span> seconds...
+    </div>
+  </div>
+
+  <script>
+    const TELEGRAM_URL = 'https://t.me/+4VEqs7ZTkPA1ZDA1';
+    const DELAY = 9; // seconds
+
+    let remaining = DELAY;
+    const counter = document.getElementById('counter');
+    const bar = document.getElementById('progressBar');
+
+    // Set initial bar width
+    bar.style.width = '100%';
+
+    const interval = setInterval(function() {
+      remaining--;
+      counter.textContent = remaining;
+      bar.style.width = Math.round((remaining / DELAY) * 100) + '%';
+
+      if (remaining <= 0) {
+        clearInterval(interval);
+        fbq('track', 'Lead');
+        fbq('track', 'Subscribe');
+        window.location.href = 'https://t.me/+4VEqs7ZTkPA1ZDA1';
+      }
+    }, 1000);
+
+    // Also redirect on button click immediately
+    document.getElementById('joinBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      clearInterval(interval);
+      fbq('track', 'Lead');
+      fbq('track', 'Subscribe');
+      window.location.href = 'https://t.me/+4VEqs7ZTkPA1ZDA1';
+    });
+  </script>
+
+</body>
+</html>
